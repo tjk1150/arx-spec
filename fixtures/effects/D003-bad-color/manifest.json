@@ -1,0 +1,49 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.D003",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "short",
+          "preset": "sparkle",
+          "colors": [
+            "#FFF",
+            "#18004A"
+          ]
+        },
+        {
+          "id": "glow",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "no-hash",
+          "preset": "sparkle",
+          "colors": [
+            "#FF0071",
+            "FF0071"
+          ]
+        }
+      ]
+    }
+  }
+}

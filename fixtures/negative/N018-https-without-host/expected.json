@@ -1,0 +1,17 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_URI_SCHEME",
+      "path": "/layers/0/src"
+    },
+    {
+      "code": "ARX_URI_SCHEME",
+      "path": "/layers/1/src"
+    },
+    {
+      "code": "ARX_URI_SCHEME",
+      "path": "/layers/2/src"
+    }
+  ]
+}

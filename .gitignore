@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+__pycache__/
+ios/**/.build/
+ios/**/.swiftpm/
+android/.gradle/
+android/.kotlin/
+android/**/build/
+android/local.properties
+.env*

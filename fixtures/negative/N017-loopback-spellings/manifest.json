@@ -1,0 +1,41 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.N017",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay0",
+      "type": "image",
+      "src": "https://127.1/overlay.png"
+    },
+    {
+      "id": "overlay1",
+      "type": "image",
+      "src": "https://2130706433/overlay.png"
+    },
+    {
+      "id": "overlay2",
+      "type": "image",
+      "src": "https://0x7f.0.0.1/overlay.png"
+    },
+    {
+      "id": "overlay3",
+      "type": "image",
+      "src": "https://0177.0.0.1/overlay.png"
+    },
+    {
+      "id": "overlay4",
+      "type": "image",
+      "src": "https://[0:0:0:0:0:0:0:1]/overlay.png"
+    },
+    {
+      "id": "overlay5",
+      "type": "image",
+      "src": "https://localhost./overlay.png"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.E002",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "sparkle-a",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ],
+          "transform": {
+            "position": [
+              0.1,
+              0.2,
+              0.03
+            ],
+            "scale": [
+              0.2,
+              0.2,
+              1
+            ]
+          }
+        },
+        {
+          "id": "rise-a",
+          "preset": "rise",
+          "colors": [
+            "#FFFFFF",
+            "#3060FF"
+          ],
+          "amount": 2,
+          "speed": 0.5,
+          "sprite": "star",
+          "transform": {
+            "position": [
+              -0.25,
+              0,
+              0.02
+            ],
+            "rotation": [
+              0,
+              0,
+              0.70710678,
+              0.70710678
+            ]
+          }
+        },
+        {
+          "id": "burst-a",
+          "preset": "burst",
+          "colors": [
+            "#FF0071",
+            "#18004A"
+          ],
+          "size": 0.05,
+          "transform": {
+            "position": [
+              0,
+              0.3,
+              0.05
+            ],
+            "rotation": [
+              0.70710678,
+              0,
+              0,
+              0.70710678
+            ],
+            "scale": [
+              0.5,
+              0.25,
+              1
+            ]
+          }
+        },
+        {
+          "id": "snow-a",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#3060FF"
+          ],
+          "amount": 0.1,
+          "speed": 0,
+          "transform": {
+            "position": [
+              0,
+              0.4,
+              0.1
+            ],
+            "rotation": [
+              0,
+              0,
+              0.25881905,
+              0.96592583
+            ],
+            "scale": [
+              1,
+              0.5,
+              2
+            ]
+          }
+        },
+        {
+          "id": "float-a",
+          "preset": "float",
+          "colors": [
+            "#36F4B8",
+            "#36F4B8"
+          ],
+          "transform": {
+            "position": [
+              0,
+              0,
+              0.01
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Fade-in of every shown layer surface (a non-normative display behaviour; spec 0.1 does not define a fade). Opacity is clamp(elapsedSeconds / durationSeconds, 0, 1) with a linear curve; elapsed time counts from the moment the surface is shown (tracking start for images and effects, first frame ready for video). Losing the target hides at once without a fade-out. Only the first find after the work loads fades; a later find shows at once at opacity 1 (video still waits for its first frame). Expected values are computed by hand.",
+  "durationSeconds": 0.4,
+  "curve": "linear",
+  "tolerance": 1e-09,
+  "samples": [
+    { "name": "before the show clamps to 0", "elapsedSeconds": -0.1, "opacity": 0.0 },
+    { "name": "at the show", "elapsedSeconds": 0.0, "opacity": 0.0 },
+    { "name": "half the duration", "elapsedSeconds": 0.2, "opacity": 0.5 },
+    { "name": "end of the duration", "elapsedSeconds": 0.4, "opacity": 1.0 },
+    { "name": "past the duration clamps to 1", "elapsedSeconds": 0.6, "opacity": 1.0 }
+  ]
+}

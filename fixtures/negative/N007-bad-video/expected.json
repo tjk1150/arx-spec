@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_VIDEO_CODEC",
+      "path": "/layers/0/src"
+    }
+  ]
+}

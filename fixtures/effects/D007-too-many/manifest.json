@@ -1,0 +1,97 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.D007",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "glow-0",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-1",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-2",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-3",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-4",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-5",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-6",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-7",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        },
+        {
+          "id": "glow-8",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ]
+        }
+      ]
+    }
+  }
+}

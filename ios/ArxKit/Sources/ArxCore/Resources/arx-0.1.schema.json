@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tjk1150.github.io/arx-spec/0.1/schema.json",
+  "title": "ARX 0.1 Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec",
+    "anchor",
+    "layers"
+  ],
+  "properties": {
+    "spec": {
+      "const": "arx/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._:-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "anchor": {
+      "$ref": "#/$defs/imageAnchor"
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/imageLayer"
+          },
+          {
+            "$ref": "#/$defs/videoLayer"
+          }
+        ]
+      }
+    },
+    "extensionsUsed": {
+      "$ref": "#/$defs/extensionNameList"
+    },
+    "extensionsRequired": {
+      "$ref": "#/$defs/extensionNameList"
+    },
+    "extensions": {
+      "$ref": "#/$defs/extensions"
+    }
+  },
+  "$defs": {
+    "extensionNameList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "default": {}
+    },
+    "uriReference": {
+      "type": "string",
+      "minLength": 1,
+      "format": "uri-reference"
+    },
+    "integrity": {
+      "type": "string",
+      "pattern": "^sha256-[A-Za-z0-9+/]+={0,2}$"
+    },
+    "layerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "position": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "description": "Target-width units: 1.0 equals the target image width."
+    },
+    "rotation": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      ]
+    },
+    "scale": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      ]
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "$ref": "#/$defs/position",
+          "default": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rotation": {
+          "$ref": "#/$defs/rotation",
+          "default": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "scale": {
+          "$ref": "#/$defs/scale",
+          "default": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "default": {}
+    },
+    "imageAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "src"
+      ],
+      "properties": {
+        "type": {
+          "const": "image"
+        },
+        "src": {
+          "$ref": "#/$defs/uriReference"
+        },
+        "physicalWidth": {
+          "description": "Optional real-world width of the target image in meters. Layer transforms are in target-width units and do not depend on it.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "integrity": {
+          "$ref": "#/$defs/integrity"
+        },
+        "extensions": {
+          "$ref": "#/$defs/extensions"
+        }
+      }
+    },
+    "imageLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "src"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/layerId"
+        },
+        "type": {
+          "const": "image"
+        },
+        "src": {
+          "$ref": "#/$defs/uriReference"
+        },
+        "integrity": {
+          "$ref": "#/$defs/integrity"
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "extensions": {
+          "$ref": "#/$defs/extensions"
+        }
+      }
+    },
+    "videoLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "src"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/layerId"
+        },
+        "type": {
+          "const": "video"
+        },
+        "src": {
+          "$ref": "#/$defs/uriReference"
+        },
+        "integrity": {
+          "$ref": "#/$defs/integrity"
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "autoplay": {
+          "type": "boolean",
+          "default": false
+        },
+        "loop": {
+          "type": "boolean",
+          "default": false
+        },
+        "extensions": {
+          "$ref": "#/$defs/extensions"
+        }
+      }
+    }
+  }
+}

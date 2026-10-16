@@ -1,0 +1,124 @@
+{
+  "valid": true,
+  "warnings": [],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        1
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "pink-sparkle",
+      "preset": "sparkle",
+      "colors": [
+        "#FF0071",
+        "#18004A"
+      ],
+      "amount": 1,
+      "size": 0.03,
+      "speed": 0,
+      "sprite": "star",
+      "matrix": [
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.1,
+        0.2,
+        0.03,
+        1
+      ]
+    }
+  ]
+}

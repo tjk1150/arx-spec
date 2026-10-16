@@ -1,0 +1,41 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.E003",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "white-cone",
+          "preset": "rise",
+          "colors": [
+            "#FFFFFF",
+            "#FFFFFF"
+          ],
+          "amount": 1,
+          "transform": {
+            "position": [
+              0,
+              0,
+              0.01
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

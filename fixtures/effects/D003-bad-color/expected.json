@@ -1,0 +1,133 @@
+{
+  "valid": true,
+  "warnings": [
+    {
+      "code": "ARX_EFFECT_INVALID",
+      "path": "/extensions/ARX_effects/effects/0/colors/0"
+    },
+    {
+      "code": "ARX_EFFECT_INVALID",
+      "path": "/extensions/ARX_effects/effects/2/colors/1"
+    }
+  ],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        1
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "glow",
+      "preset": "sparkle",
+      "colors": [
+        "#FFD700",
+        "#FFFFFF"
+      ],
+      "amount": 1,
+      "size": 0.03,
+      "speed": 1,
+      "sprite": "star",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

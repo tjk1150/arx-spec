@@ -1,0 +1,31 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.D006",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": {
+        "id": "glow",
+        "preset": "sparkle",
+        "colors": [
+          "#FFD700",
+          "#FFFFFF"
+        ]
+      }
+    }
+  }
+}

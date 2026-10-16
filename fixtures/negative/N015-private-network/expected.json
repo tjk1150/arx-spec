@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/0/src"
+    }
+  ]
+}

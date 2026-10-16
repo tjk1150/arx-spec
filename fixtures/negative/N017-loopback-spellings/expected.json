@@ -1,0 +1,29 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/0/src"
+    },
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/1/src"
+    },
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/2/src"
+    },
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/3/src"
+    },
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/4/src"
+    },
+    {
+      "code": "ARX_URI_PRIVATE_NETWORK",
+      "path": "/layers/5/src"
+    }
+  ]
+}

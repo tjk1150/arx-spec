@@ -1,0 +1,153 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.E009",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "snow-0",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              -0.35,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-1",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              -0.25,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-2",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              -0.15,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-3",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              -0.05,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-4",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              0.05,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-5",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              0.15,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-6",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              0.25,
+              0.3,
+              0.02
+            ]
+          }
+        },
+        {
+          "id": "snow-7",
+          "preset": "snow",
+          "colors": [
+            "#FFFFFF",
+            "#C8E6FF"
+          ],
+          "amount": 4,
+          "transform": {
+            "position": [
+              0.35,
+              0.3,
+              0.02
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

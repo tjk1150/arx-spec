@@ -1,0 +1,48 @@
+name: pages
+
+# Publishes the two JSON Schemas at the addresses their $id values name:
+#   https://tjk1150.github.io/arx-spec/0.1/schema.json
+#   https://tjk1150.github.io/arx-spec/0.1/ext/ARX_effects.schema.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - schema/arx-0.1.schema.json
+      - schema/ext/ARX_effects.schema.json
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p _site/0.1/ext
+          cp schema/arx-0.1.schema.json _site/0.1/schema.json
+          cp schema/ext/ARX_effects.schema.json _site/0.1/ext/ARX_effects.schema.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

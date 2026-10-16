@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_ASSET_MISSING",
+      "path": "/layers/0/src"
+    }
+  ]
+}

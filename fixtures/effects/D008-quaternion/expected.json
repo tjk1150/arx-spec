@@ -1,0 +1,167 @@
+{
+  "valid": true,
+  "warnings": [
+    {
+      "code": "ARX_EFFECT_INVALID",
+      "path": "/extensions/ARX_effects/effects/0/transform/rotation"
+    },
+    {
+      "code": "ARX_QUATERNION_DRIFT",
+      "path": "/extensions/ARX_effects/effects/1/transform/rotation"
+    },
+    {
+      "code": "ARX_EFFECT_INVALID",
+      "path": "/extensions/ARX_effects/effects/3/transform/rotation/3"
+    }
+  ],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        1
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "drifted",
+      "preset": "sparkle",
+      "colors": [
+        "#FFD700",
+        "#FFFFFF"
+      ],
+      "amount": 1,
+      "size": 0.03,
+      "speed": 1,
+      "sprite": "star",
+      "matrix": [
+        0.98019802,
+        0.1980198,
+        0,
+        0,
+        -0.1980198,
+        0.98019802,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.2,
+        0,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "near-unit",
+      "preset": "sparkle",
+      "colors": [
+        "#FFD700",
+        "#FFFFFF"
+      ],
+      "amount": 1,
+      "size": 0.03,
+      "speed": 1,
+      "sprite": "star",
+      "matrix": [
+        0.99980002,
+        0.019998,
+        0,
+        0,
+        -0.019998,
+        0.99980002,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.2,
+        0,
+        0.02,
+        1
+      ]
+    }
+  ]
+}

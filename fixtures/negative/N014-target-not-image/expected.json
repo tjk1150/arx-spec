@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_ASSET_DECODE",
+      "path": "/anchor/src"
+    }
+  ]
+}

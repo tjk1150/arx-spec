@@ -1,0 +1,24 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.C015",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png",
+      "transform": {
+        "rotation": [
+          0.70710678,
+          0,
+          0,
+          0.70710678
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "valid": true,
+  "warnings": [],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        1
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "snow-0",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.35,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-1",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.25,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-2",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.15,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-3",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.05,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-4",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.05,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-5",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.15,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-6",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.25,
+        0.3,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "snow-7",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#C8E6FF"
+      ],
+      "amount": 4,
+      "size": 0.012,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.35,
+        0.3,
+        0.02,
+        1
+      ]
+    }
+  ]
+}

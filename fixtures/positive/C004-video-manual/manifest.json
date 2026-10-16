@@ -1,0 +1,16 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.C004",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "clip",
+      "type": "video",
+      "src": "assets/video.mp4"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_DUPLICATE_LAYER_ID",
+      "path": "/layers/1/id"
+    }
+  ]
+}

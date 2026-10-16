@@ -1,0 +1,102 @@
+{
+  "valid": true,
+  "warnings": [],
+  "manifestUrl": "https://cdn.arx.example/fixtures/C010/manifest.json",
+  "serve": {
+    "https://cdn.arx.example/fixtures/C010/manifest.json": "manifest.json",
+    "https://cdn.arx.example/fixtures/C010/assets/target.jpg": "assets/target.jpg",
+    "https://media.arx.example/shared/overlay.png": "assets/overlay.png"
+  },
+  "resolved": {
+    "/anchor/src": "https://cdn.arx.example/fixtures/C010/assets/target.jpg",
+    "/layers/0/src": "https://media.arx.example/shared/overlay.png"
+  },
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        0.75
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

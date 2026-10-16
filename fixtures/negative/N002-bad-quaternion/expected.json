@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_QUATERNION_NOT_UNIT",
+      "path": "/layers/0/transform/rotation"
+    }
+  ]
+}

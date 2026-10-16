@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_EXTENSION_NOT_DECLARED",
+      "path": "/extensionsRequired/0"
+    }
+  ]
+}

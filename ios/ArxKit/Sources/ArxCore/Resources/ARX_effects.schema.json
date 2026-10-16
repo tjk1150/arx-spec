@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tjk1150.github.io/arx-spec/0.1/ext/ARX_effects.schema.json",
+  "title": "ARX_effects extension object (extensions.ARX_effects)",
+  "description": "Value of the top-level extensions.ARX_effects object of an arx/0.1 manifest. Normative text: spec/extensions/ARX_effects.md. Preset values: ARX_effects.presets.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "effects"
+  ],
+  "properties": {
+    "effects": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/effect"
+      }
+    }
+  },
+  "$defs": {
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "preset",
+        "colors"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/effectId"
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "preset": {
+          "$ref": "#/$defs/presetName",
+          "description": "Known values: sparkle, rise, burst, snow, float. An unknown well-formed name is ARX_EFFECT_UNSUPPORTED, not a schema error."
+        },
+        "colors": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "#/$defs/color"
+          },
+          "description": "Birth color then death color, linear over the particle's life."
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 4,
+          "default": 1,
+          "description": "Multiplier of the preset's particles per second."
+        },
+        "size": {
+          "type": "number",
+          "minimum": 0.002,
+          "maximum": 0.2,
+          "description": "Particle side in target-width units. Default: the preset's size."
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 4,
+          "default": 1,
+          "description": "Multiplier of the preset's speed."
+        },
+        "sprite": {
+          "$ref": "#/$defs/spriteName",
+          "description": "Known values: dot, soft, star, glow-star. Default: the preset's sprite. An unknown well-formed name is ARX_EFFECT_UNSUPPORTED."
+        }
+      }
+    },
+    "effectId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "presetName": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,31}$"
+    },
+    "spriteName": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,31}$"
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "sRGB, #RRGGBB."
+    },
+    "position": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "description": "Target-width units: 1.0 equals the target image width."
+    },
+    "rotation": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      ]
+    },
+    "scale": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      ]
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "$ref": "#/$defs/position",
+          "default": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rotation": {
+          "$ref": "#/$defs/rotation",
+          "default": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "scale": {
+          "$ref": "#/$defs/scale",
+          "default": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "default": {}
+    }
+  }
+}

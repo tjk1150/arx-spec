@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "code": "ARX_SCHEMA",
+      "path": "/layers/0/src"
+    }
+  ]
+}

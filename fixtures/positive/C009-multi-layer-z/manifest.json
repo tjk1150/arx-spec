@@ -1,0 +1,42 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.C009",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "frame",
+      "type": "image",
+      "src": "assets/overlay.png",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0.005
+        ]
+      }
+    },
+    {
+      "id": "clip",
+      "type": "video",
+      "src": "assets/video.mp4",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0.015
+        ],
+        "scale": [
+          0.92,
+          0.92,
+          1
+        ]
+      },
+      "autoplay": true,
+      "loop": true
+    }
+  ]
+}

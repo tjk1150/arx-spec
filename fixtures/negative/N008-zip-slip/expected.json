@@ -1,0 +1,10 @@
+{
+  "valid": false,
+  "package": "experience.arx",
+  "errors": [
+    {
+      "code": "ARX_PACKAGE_PATH",
+      "path": "zip:../evil.png"
+    }
+  ]
+}

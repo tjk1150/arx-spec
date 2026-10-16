@@ -1,0 +1,92 @@
+{
+  "valid": true,
+  "warnings": [],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": null
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        0.75
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.005,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0.005,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0.005,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0.005,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

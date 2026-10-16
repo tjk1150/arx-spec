@@ -1,0 +1,99 @@
+{
+  "spec": "arx/0.1",
+  "id": "fixture.D008",
+  "anchor": {
+    "type": "image",
+    "src": "assets/target.jpg",
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "type": "image",
+      "src": "assets/overlay.png"
+    }
+  ],
+  "extensionsUsed": [
+    "ARX_effects"
+  ],
+  "extensions": {
+    "ARX_effects": {
+      "effects": [
+        {
+          "id": "overlay",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ],
+          "transform": {
+            "rotation": [
+              0,
+              0,
+              0.32015621,
+              1
+            ]
+          }
+        },
+        {
+          "id": "drifted",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ],
+          "transform": {
+            "position": [
+              0.2,
+              0,
+              0.02
+            ],
+            "rotation": [
+              0,
+              0,
+              0.1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "near-unit",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ],
+          "transform": {
+            "position": [
+              -0.2,
+              0,
+              0.02
+            ],
+            "rotation": [
+              0,
+              0,
+              0.01,
+              1
+            ]
+          }
+        },
+        {
+          "id": "over-one",
+          "preset": "sparkle",
+          "colors": [
+            "#FFD700",
+            "#FFFFFF"
+          ],
+          "transform": {
+            "rotation": [
+              0,
+              0,
+              0,
+              1.05
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

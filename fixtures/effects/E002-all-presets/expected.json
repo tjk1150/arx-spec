@@ -1,0 +1,244 @@
+{
+  "valid": true,
+  "warnings": [],
+  "target": {
+    "size": [
+      1,
+      0.75
+    ],
+    "physicalWidth": 0.2
+  },
+  "layers": [
+    {
+      "id": "overlay",
+      "size": [
+        1,
+        1
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "arFoundation": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arcore": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "arkit": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "sparkle-a",
+      "preset": "sparkle",
+      "colors": [
+        "#FFD700",
+        "#FFFFFF"
+      ],
+      "amount": 1,
+      "size": 0.03,
+      "speed": 1,
+      "sprite": "star",
+      "matrix": [
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.1,
+        0.2,
+        0.03,
+        1
+      ]
+    },
+    {
+      "id": "rise-a",
+      "preset": "rise",
+      "colors": [
+        "#FFFFFF",
+        "#3060FF"
+      ],
+      "amount": 2,
+      "size": 0.015,
+      "speed": 0.5,
+      "sprite": "star",
+      "matrix": [
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.25,
+        0,
+        0.02,
+        1
+      ]
+    },
+    {
+      "id": "burst-a",
+      "preset": "burst",
+      "colors": [
+        "#FF0071",
+        "#18004A"
+      ],
+      "amount": 1,
+      "size": 0.05,
+      "speed": 1,
+      "sprite": "soft",
+      "matrix": [
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0.3,
+        0.05,
+        1
+      ]
+    },
+    {
+      "id": "snow-a",
+      "preset": "snow",
+      "colors": [
+        "#FFFFFF",
+        "#3060FF"
+      ],
+      "amount": 0.1,
+      "size": 0.012,
+      "speed": 0,
+      "sprite": "soft",
+      "matrix": [
+        0.8660254,
+        0.5,
+        0,
+        0,
+        -0.25,
+        0.4330127,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0.4,
+        0.1,
+        1
+      ]
+    },
+    {
+      "id": "float-a",
+      "preset": "float",
+      "colors": [
+        "#36F4B8",
+        "#36F4B8"
+      ],
+      "amount": 1,
+      "size": 0.05,
+      "speed": 1,
+      "sprite": "glow-star",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.01,
+        1
+      ]
+    }
+  ]
+}
