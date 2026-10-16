@@ -126,6 +126,10 @@ Web addresses in the fixtures use reserved test domains (`*.example`) and privat
 
 Issues and pull requests are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue before a larger change, so the direction can be agreed first. A change to the format needs the specification, the schema, the fixtures and all three validators to move together.
 
+## Support
+
+ARX is built and maintained by one person. If it is useful to you, you can support the work through [GitHub Sponsors](https://github.com/sponsors/tjk1150) or [Buy Me a Coffee](https://buymeacoffee.com/tjk1150). Reports, fixes and translations are just as welcome (see [Contributing](#contributing)).
+
 ## License
 
 - Code, schemas and fixtures: [Apache License 2.0](LICENSE). Third-party components the validators depend on are listed in [`NOTICE`](NOTICE).
