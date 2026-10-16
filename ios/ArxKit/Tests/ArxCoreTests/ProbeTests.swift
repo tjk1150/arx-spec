@@ -16,12 +16,17 @@ struct ProbeTests {
 
     /// SOI, APP1 Exif with IFD0 orientation, SOF0 with the given size, EOI.
     static func jpegWithOrientation(width: Int, height: Int, orientation: Int) -> Data {
-        let tiff: [UInt8] = [0x4D, 0x4D, 0x00, 0x2A] + u32(8) // big-endian TIFF header, IFD0 at 8
-            + u16(1) // one entry
-            + u16(0x0112) + u16(3) + u32(1) + u16(orientation) + [0, 0]
-            + u32(0)
+        // Built from parts rather than one long `+` chain, which older compilers fail to type-check in time.
+        let tiffParts: [[UInt8]] = [
+            [0x4D, 0x4D, 0x00, 0x2A], u32(8), // big-endian TIFF header, IFD0 at 8
+            u16(1), // one entry
+            u16(0x0112), u16(3), u32(1), u16(orientation), [0, 0],
+            u32(0),
+        ]
+        let tiff = tiffParts.flatMap { $0 }
         let app1 = latin1("Exif\0\0") + tiff
-        let sof: [UInt8] = [8] + u16(height) + u16(width) + [3, 1, 0x22, 0, 2, 0x11, 1, 3, 0x11, 1]
+        let sofParts: [[UInt8]] = [[8], u16(height), u16(width), [3, 1, 0x22, 0, 2, 0x11, 1, 3, 0x11, 1]]
+        let sof = sofParts.flatMap { $0 }
         let parts: [[UInt8]] = [
             [0xFF, 0xD8],
             [0xFF, 0xE1] + u16(app1.count + 2) + app1,

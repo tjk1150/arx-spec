@@ -168,15 +168,17 @@ describe("tools/generate_effect_sprites.py and glow-star", () => {
   beforeAll(() => runs.forEach((dir) => execFileSync("python3", [GENERATOR, "--out", dir], { stdio: "ignore" })));
   afterAll(() => runs.forEach((dir) => rmSync(dir, { recursive: true, force: true })));
 
-  it("writes glow-star.png with the same bytes on two runs, equal to the checked-in file", () => {
+  // A new run matches the checked-in file by pixels: the compressed bytes depend on the zlib build and the CPU.
+  it("writes glow-star.png with the same bytes on two runs and the same pixels as the checked-in file", () => {
     const [first, second] = runs.map((dir) => readFileSync(path.join(dir, "glow-star.png")));
     expect(first!.equals(second!)).toBe(true);
-    expect(first!.equals(Buffer.from(pngBytes))).toBe(true);
+    expect(decodePng(first!)).toEqual(decodePng(pngBytes));
   });
 
-  it.each(Object.keys(EARLIER_SPRITES))("leaves %s with its earlier bytes, in the repository and in a new run", (name) => {
-    expect(sha256(readFileSync(path.join(SPRITES_DIR, name)))).toBe(EARLIER_SPRITES[name]);
-    expect(sha256(readFileSync(path.join(runs[0]!, name)))).toBe(EARLIER_SPRITES[name]);
+  it.each(Object.keys(EARLIER_SPRITES))("leaves %s with its earlier bytes in the repository and its pixels in a new run", (name) => {
+    const checkedIn = readFileSync(path.join(SPRITES_DIR, name));
+    expect(sha256(checkedIn)).toBe(EARLIER_SPRITES[name]);
+    expect(decodePng(readFileSync(path.join(runs[0]!, name)))).toEqual(decodePng(checkedIn));
   });
 });
 

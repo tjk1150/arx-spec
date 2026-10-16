@@ -276,13 +276,15 @@ describe("tools/generate_effect_sprites.py", () => {
   const runs = [mkdtempSync(path.join(tmpdir(), "arx-sprites-")), mkdtempSync(path.join(tmpdir(), "arx-sprites-"))];
   afterAll(() => runs.forEach((dir) => rmSync(dir, { recursive: true, force: true })));
 
-  it("writes the same bytes on every run, equal to the checked-in sprites", () => {
+  // The compressed bytes depend on the zlib build and the CPU (zlib-ng picks its deflate code per architecture), so a new
+  // run is compared with the checked-in sprite by its pixels; two runs on one machine still match byte for byte.
+  it("writes the same bytes on every run and the same pixels as the checked-in sprites", () => {
     runs.forEach((dir) => execFileSync("python3", [GENERATOR, "--out", dir], { stdio: "ignore" }));
     for (const name of SPRITE_NAMES) {
       const file = `${name}.png`;
       const [first, second] = runs.map((dir) => readFileSync(path.join(dir, file)));
       expect(first!.equals(second!), `${file} differs between runs`).toBe(true);
-      expect(first!.equals(readFileSync(path.join(SPRITES_DIR, file))), `${file} differs from the repository`).toBe(true);
+      expect(decodePng(first!), `${file} pixels differ from the repository`).toEqual(decodePng(readFileSync(path.join(SPRITES_DIR, file))));
     }
   });
 });
