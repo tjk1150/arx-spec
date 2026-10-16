@@ -1,6 +1,6 @@
 # ARX 0.1 확장 `ARX_effects` — 파티클 효과
 
-상태: 초안 (2026-10-01). [ARX 0.1 명세](../0.1.md) 10장의 선택 확장이다. 기계 판독용 계약은 확장 스키마 [`schema/ext/ARX_effects.schema.json`](../../schema/ext/ARX_effects.schema.json), 프리셋 표 [`schema/ext/ARX_effects.presets.json`](../../schema/ext/ARX_effects.presets.json), 내장 스프라이트 [`schema/ext/sprites/`](../../schema/ext/sprites)이다. 스프라이트는 [`tools/generate_effect_sprites.py`](../../tools/generate_effect_sprites.py)로 만든다. 이 문서와 두 JSON 파일이 충돌하면 버그로 보고 어느 한쪽을 고친다.
+상태: 초안 (2026-10-01, 2026-10-16 문구 명확화. ARX 0.1.1 14.1). [ARX 0.1 명세](../0.1.md) 10장의 선택 확장이다. 기계 판독용 계약은 확장 스키마 [`schema/ext/ARX_effects.schema.json`](../../schema/ext/ARX_effects.schema.json), 프리셋 표 [`schema/ext/ARX_effects.presets.json`](../../schema/ext/ARX_effects.presets.json), 내장 스프라이트 [`schema/ext/sprites/`](../../schema/ext/sprites)이다. 스프라이트는 [`tools/generate_effect_sprites.py`](../../tools/generate_effect_sprites.py)로 만든다. 이 문서와 두 JSON 파일이 충돌하면 버그로 보고 어느 한쪽을 고친다.
 
 ## 1. 목적과 선언
 
@@ -54,6 +54,8 @@
 | `effects[].size` | MAY | 0.002~0.2, 기본값은 프리셋의 `size` | 입자 한 변의 길이, 타깃 너비 단위 |
 | `effects[].speed` | MAY | 0~4, 기본값 `1` | 프리셋의 속도에 곱한다 |
 | `effects[].sprite` | MAY | `^[a-z][a-z0-9-]{0,31}$`. 이 문서가 정한 값은 `dot`, `soft`, `star`, `glow-star`. 기본값은 프리셋의 `sprite` | 입자 모양(8장). 사용자 이미지는 이 확장의 범위 밖이다 |
+
+이 표의 MUST를 어긴 효과는 manifest를 무효로 만들지 않으며 4.2절대로 빠진다.
 
 `ARX_effects` 객체와 효과 객체에 정의되지 않은 필드는 확장 스키마에서 거부된다(`additionalProperties: false`). 확장 스키마의 `position`, `rotation`, `scale`, `transform` 정의는 0.1 schema의 것을 그대로 복사한 것이며, 둘이 같아야 한다(MUST).
 
@@ -152,7 +154,7 @@
 
 ## 7. 결정적 시뮬레이션
 
-입자를 직접 계산하는 구현은 이 장을 따라야 한다(MUST). 같은 효과는 같은 시각에 같은 입자를 가진다. 엔진의 파티클 시스템(예: RealityKit `ParticleEmitterComponent`)에 맡기는 구현은 프리셋 값을 옮겨 쓰고 비슷해 보이면 된다(SHOULD). 엔진의 곡선과 난수는 이 장과 같지 않을 수 있다.
+입자를 직접 계산하는 구현은 이 장을 따라야 한다(MUST). 같은 효과는 같은 시각에 같은 입자를 가진다. 엔진의 파티클 시스템(예: RealityKit `ParticleEmitterComponent`)에 맡기는 구현에는 7.2~7.5절이 걸리지 않는다. 이런 구현은 5장의 프리셋 값을 엔진 설정으로 옮겨 써야 하며(SHOULD), 결과는 비슷해 보이면 된다. 엔진의 곡선과 난수는 이 장과 같지 않을 수 있다.
 
 ### 7.1 시계
 

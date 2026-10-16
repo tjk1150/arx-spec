@@ -2,7 +2,7 @@
 
 This is an informative translation. The Korean text ([ARX_effects.md](ARX_effects.md)) is normative.
 
-Status: draft (2026-10-01). An optional extension under section 10 of the [ARX 0.1 specification](../0.1.en.md). The machine-readable contract is the extension schema [`schema/ext/ARX_effects.schema.json`](../../schema/ext/ARX_effects.schema.json), the preset table [`schema/ext/ARX_effects.presets.json`](../../schema/ext/ARX_effects.presets.json), and the built-in sprites [`schema/ext/sprites/`](../../schema/ext/sprites). The sprites are generated with [`tools/generate_effect_sprites.py`](../../tools/generate_effect_sprites.py). If this document and the two JSON files conflict, the conflict is treated as a bug and one of them is fixed.
+Status: draft (2026-10-01; wording clarified 2026-10-16, see ARX 0.1.1 section 14.1). An optional extension under section 10 of the [ARX 0.1 specification](../0.1.en.md). The machine-readable contract is the extension schema [`schema/ext/ARX_effects.schema.json`](../../schema/ext/ARX_effects.schema.json), the preset table [`schema/ext/ARX_effects.presets.json`](../../schema/ext/ARX_effects.presets.json), and the built-in sprites [`schema/ext/sprites/`](../../schema/ext/sprites). The sprites are generated with [`tools/generate_effect_sprites.py`](../../tools/generate_effect_sprites.py). If this document and the two JSON files conflict, the conflict is treated as a bug and one of them is fixed.
 
 ## 1. Purpose and declaration
 
@@ -56,6 +56,8 @@ An artwork made of effects alone, with zero layers, cannot be created. As in sec
 | `effects[].size` | MAY | 0.002 to 0.2, default: the preset's `size` | Side length of one particle, in target-width units |
 | `effects[].speed` | MAY | 0 to 4, default `1` | Multiplier of the preset's speed |
 | `effects[].sprite` | MAY | `^[a-z][a-z0-9-]{0,31}$`. Values defined by this document: `dot`, `soft`, `star`, `glow-star`. Default: the preset's `sprite` | Particle shape (section 8). User images are outside the scope of this extension |
+
+An effect that breaks a MUST of this table does not make the manifest invalid; it is dropped as in section 4.2.
 
 Fields that are not defined in the `ARX_effects` object or in an effect object are rejected by the extension schema (`additionalProperties: false`). The `position`, `rotation`, `scale`, and `transform` definitions of the extension schema are copied unchanged from the 0.1 schema, and the two MUST stay identical.
 
@@ -154,7 +156,7 @@ Adding curves does not conflict with old Viewers. Curve names are not written in
 
 ## 7. Deterministic simulation
 
-An implementation that computes the particles itself MUST follow this section. The same effect has the same particles at the same time. An implementation that leaves the work to an engine's particle system (for example RealityKit `ParticleEmitterComponent`) SHOULD carry over the preset values, and it is enough that the result looks similar. The curves and random numbers of the engine may differ from this section.
+An implementation that computes the particles itself MUST follow this section. The same effect has the same particles at the same time. Sections 7.2 to 7.5 do not apply to an implementation that leaves the work to an engine's particle system (for example RealityKit `ParticleEmitterComponent`). Such an implementation SHOULD carry the preset values of section 5 over into the engine settings; it is enough that the result looks similar. The curves and random numbers of the engine may differ from this section.
 
 ### 7.1 Clock
 
